@@ -1,4 +1,5 @@
-import css from 'bundle-text:./styles.css'
+// import css from 'bundle-text:./styles.css'
+const css = "" //!!
 
 let addedStyles = false
 

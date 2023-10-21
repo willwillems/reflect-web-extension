@@ -1,5 +1,6 @@
 import '@webcomponents/webcomponentsjs/webcomponents-bundle'
-import html from 'bundle-text:./template.html'
+// import html from 'bundle-text:./template.html'
+const html = "" //!!
 
 import { assert, assertString } from '../../lib/assert'
 import { LinkSnapshot } from '../../lib/types/link-snapshot'

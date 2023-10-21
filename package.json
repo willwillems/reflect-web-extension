@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.248",
+    "@types/lodash": "^4.14.200",
+    "@types/uuid": "^9.0.6",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@floating-ui/dom": "^1.5.3",
+    "@webcomponents/webcomponentsjs": "^2.8.0",
+    "css-select": "^5.1.0",
+    "dom-anchor-text-quote": "^4.0.2",
+    "domhandler": "^5.0.3",
+    "domutils": "^3.1.0",
+    "htmlparser2": "^9.0.0",
+    "lodash": "^4.17.21",
+    "mobx": "^6.10.2",
+    "mobx-keystone": "^1.6.5",
+    "mobx-utils": "^6.0.8",
+    "uuid": "^9.0.1",
+    "wrap-range-text": "^1.0.1"
+  }
+}

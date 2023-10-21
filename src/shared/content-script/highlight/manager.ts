@@ -68,7 +68,7 @@ function findRangeWithText(text: string, offset: number | null) {
 }
 
 export function removeMarks() {
-  const nodes = document.querySelectorAll('reflect-highlight')
+  const nodes = Array.from(document.querySelectorAll('reflect-highlight'))
 
   for (const node of nodes) {
     unwrapNode(node)
