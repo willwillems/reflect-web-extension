@@ -19,6 +19,20 @@ export class ToolbarElement extends HTMLElement {
 
   constructor() {
     super()
+    {
+      // https://bugzilla.mozilla.org/show_bug.cgi?id=1716685
+      const proto = ToolbarElement.prototype
+      for (const key of Object.getOwnPropertyNames(proto)) {
+        const descriptor = Object.getOwnPropertyDescriptor(proto, key)
+        if (descriptor && descriptor.get) {
+          Object.defineProperty(this, key, {
+            get: descriptor.get.bind(this),
+          })
+        } else {
+          this[key] = proto[key]
+        }
+      }
+    }
     this.shadow = this.attachShadow({ mode: 'open' })
   }
 
