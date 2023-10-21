@@ -8,6 +8,7 @@ import {
 } from '../../lib/types/message-types'
 import { Link } from '../models/link'
 import { rootStore } from '../models/store'
+import { cloneDeep } from 'lodash'
 
 export class ContentScriptTransport {
   @observable
@@ -44,7 +45,8 @@ export class ContentScriptTransport {
     }
 
     try {
-      this.port.postMessage(linkSnapshot)
+      const messageCopy = cloneDeep(linkSnapshot) 
+      this.port.postMessage(messageCopy)
     } catch (error) {
       console.error('Error posting link snapshot: ', error)
     }

@@ -1,3 +1,4 @@
+import { cloneDeep } from 'lodash'
 import { getLocationUrl } from '../lib/location'
 import { onLocationChange } from '../lib/on-location-change'
 import { LinkSnapshot } from '../lib/types/link-snapshot'
@@ -40,7 +41,8 @@ function postSubscribe(port: chrome.runtime.Port) {
   }
 
   try {
-    port.postMessage(message)
+    const messageCopy = cloneDeep(message) 
+    port.postMessage(messageCopy)
   } catch (error) {
     console.error('[reflect]', 'content-script-ready error', error)
   }
