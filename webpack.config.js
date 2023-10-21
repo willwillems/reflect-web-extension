@@ -1,14 +1,15 @@
 const path = require('path');
 // const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
-   mode: "production",
+   mode: "development",
    entry: {
-      background: path.resolve(__dirname, "src", "chrome", "background.ts"),
-      content: path.resolve(__dirname, "src", "chrome", "content-script.ts"),
+      "background": path.resolve(__dirname, "src", "chrome", "background.ts"),
+      "content-script": path.resolve(__dirname, "src", "chrome", "content-script.ts"),
    },
    output: {
       path: path.join(__dirname, "dist"),
       filename: "[name].js",
+      sourceMapFilename: "[name].js.map", // add source map generation
    },
    resolve: {
       extensions: [".ts", ".js"],
@@ -27,4 +28,5 @@ module.exports = {
    //       patterns: [{from: ".", to: ".", context: "public"}]
    //    }),
    // ],
+   devtool: "source-map", // add source map generation
 };
