@@ -16,6 +16,7 @@ export class ToolbarElement extends HTMLElement {
   link: LinkSnapshot | null = null
   descriptionDropdown = false
   shadow: ShadowRoot
+  boundHandleDocumentClick: (event: MouseEvent) => void = () => {}
 
   constructor() {
     super()
@@ -34,6 +35,8 @@ export class ToolbarElement extends HTMLElement {
       }
     }
     this.shadow = this.attachShadow({ mode: 'open' })
+
+    this.boundHandleDocumentClick = this.handleDocumentClick.bind(this)
   }
 
   connectedCallback() {
@@ -113,8 +116,6 @@ export class ToolbarElement extends HTMLElement {
       this.setDescriptionDropdown(false)
     }
   }
-
-  private boundHandleDocumentClick = this.handleDocumentClick.bind(this)
 
   private get checkboxInput() {
     const element = this.shadow.querySelector('input[name="auto-highlight"]')
