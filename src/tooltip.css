@@ -1,0 +1,45 @@
+:host {
+   filter: drop-shadow(0 1px #0000000d) drop-shadow(0 1px 1px #0000000d) drop-shadow(0 1px 2px #0000000d) drop-shadow(0 2px 4px #0000000d) drop-shadow(0 3px 6px #0000000d);
+   z-index: 10000000;
+   background: #f9fafb;
+   border-radius: 8px;
+   padding: 5px;
+   display: block;
+ }
+ 
+ button {
+   color: #fff;
+   cursor: pointer;
+   background: #8b5cf6;
+   border: none;
+   border-radius: 4px;
+   justify-content: center;
+   align-items: center;
+   padding: 8px 15px;
+   font-family: BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+   font-size: 13px;
+   display: inline-flex;
+ }
+ 
+ button svg {
+   margin-right: 5px;
+ }
+ 
+ button:hover {
+   background: #8b5cf6e6;
+ }
+ 
+ .arrow {
+   border: 8px solid #0000;
+   border-top-color: #fafafa;
+   width: 0;
+   height: 0;
+   position: absolute;
+ }
+ 
+ @media (prefers-color-scheme: dark) {
+   :host {
+     background-color: #1f2937;
+   }
+ }
+ 

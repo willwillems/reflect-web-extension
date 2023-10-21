@@ -6,6 +6,8 @@
     "@types/chrome": "^0.0.248",
     "@types/lodash": "^4.14.200",
     "@types/uuid": "^9.0.6",
+    "css-loader": "^6.8.1",
+    "html-loader": "^4.2.0",
     "ts-loader": "^9.5.0",
     "typescript": "^5.2.2",
     "webpack": "^5.89.0",

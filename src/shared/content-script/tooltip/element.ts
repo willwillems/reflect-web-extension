@@ -1,6 +1,6 @@
 import '@webcomponents/webcomponentsjs/webcomponents-bundle'
-// import css from 'bundle-text:./styles.css'
-const css = "" //!!
+// @ts-ignore
+import css from "../../../tooltip.css"
 
 import { assert } from '../../lib/assert'
 import { getLocationUrl } from '../../lib/location'

@@ -1,6 +1,6 @@
 import '@webcomponents/webcomponentsjs/webcomponents-bundle'
-// import html from 'bundle-text:./template.html'
-const html = "" //!!
+// @ts-ignore
+import html from "../../../template.html";
 
 import { assert, assertString } from '../../lib/assert'
 import { LinkSnapshot } from '../../lib/types/link-snapshot'

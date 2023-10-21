@@ -1,6 +1,5 @@
-// import css from 'bundle-text:./styles.css'
-const css = "" //!!
-
+// @ts-ignore
+import css from "../../../highlight.css"
 let addedStyles = false
 
 export function addStyles() {

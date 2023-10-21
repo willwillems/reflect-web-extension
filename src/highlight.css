@@ -1,0 +1,10 @@
+reflect-highlight {
+   color: #000;
+   cursor: pointer;
+   background-image: linear-gradient(0deg, #ffd500 0% 2px, #ffd50026 2px 100%);
+   background-position: 0 75%;
+   background-repeat: no-repeat;
+   background-size: 100% 90%;
+   display: inline;
+ }
+ 
