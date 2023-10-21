@@ -1,0 +1,49 @@
+{
+   "action": {
+      "default_icon": "icons/icon-128.png"
+   },
+   "background": {
+      "scripts": ["background.js"]
+   },
+   "commands": {
+      "_execute_action": {
+         "description": "Save Page to Reflect",
+         "suggested_key": {
+            "chromeos": "Ctrl+Shift+P",
+            "linux": "Ctrl+Shift+P",
+            "mac": "Command+Shift+P",
+            "windows": "Ctrl+Shift+P"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "content-script.js" ],
+      "matches": [ "https://*/*", "http://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Reflect.app Web extension",
+   "differential_fingerprint": "1.46f2780308979eec4042ffebfc49f73d7d6d098fa1258d6f6464a0be65431345",
+   "externally_connectable": {
+      "matches": [ "https://reflect.app/*", "https://*.reflect.app/*" ]
+   },
+   "host_permissions": [ "https://read.amazon.com/*", "https://reflect.app/*", "https://*.reflect.app/*", "https://twitter.com/*" ],
+   "icons": {
+      "128": "icons/icon-128.png",
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqGoNZ0I7mh8ef28oBubwu2sVOQKGFI1ecAhyNBpgoMSA1ra1kkvTQPa3haOILaGegTGO48alw0BNbbeKZeB9K3hhgoVtfaRrLQUa9zCEBp9xbQfimCo28p0gdRJ7ys9nGhMz3oO49SOKACwBdBlIJDo4cBhKrqlij+jN7Os633Gq4u5TOwYJ6RJOq3cqR6BjccnPzV0Yku59QXWddx2gprKckDeQeBdD71MEk0FTihSvNQFW+SbL0tM6SVTqxt330E2uE8sqbta5sSsKZKAjOQWBZ7BM2XQftb/sXoi6z8gVqxdvBATGqmIT7g0Itz6SgKcKnYPP0ufdiHMbmBBupwIDAQAB",
+   "manifest_version": 3,
+   "name": "Reflect",
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "permissions": [ "storage", "alarms", "webNavigation", "activeTab", "scripting", "contextMenus", "webRequest", "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.6.2",
+   "web_accessible_resources": [ {
+      "matches": [ "https://*/*" ],
+      "resources": [ "icons/icon-128.png" ]
+   } ]
+}
