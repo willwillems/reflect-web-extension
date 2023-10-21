@@ -1,3 +1,4 @@
+import { cloneDeep } from 'lodash'
 import { Message } from './types/message-types'
 
 export async function sendMessage(message: Message): Promise<any> {
@@ -6,7 +7,8 @@ export async function sendMessage(message: Message): Promise<any> {
   let result: any
 
   try {
-    result = await chrome.runtime.sendMessage(message)
+    const messageCopy = cloneDeep(message)
+    result = await chrome.runtime.sendMessage(messageCopy)
   } catch (error: any) {
     // We get this message when the then the options page is closed, for example.
     if (
